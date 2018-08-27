@@ -3,7 +3,14 @@ const printToDom = (stringToPrint, divId) => {
     selectedDiv.innerHTML += stringToPrint;
 };
 
-let str = "I am Please locate where too 'locate' occurs!!"
+const printToDom2 = (stringToPrint, divClass) => {
+    const selectedDiv = document.getElementsByClassName(divClass);
+    selectedDiv.innerHTML += stringToPrint;
+}
+
+
+
+let str = "I am cow cow Please locate where too 'locate' occurs!!"
 let pos = str.lastIndexOf("occurs");
 console.log('Print pos: ' + pos);
 console.log('Length : ' + str.length);
@@ -25,3 +32,4 @@ printToDom(str3, 'test1');
 printToDom(pos, 'test2');
 printToDom(str, 'test3');
 printToDom(`${pos} ${str}` + ` cow ${str3}`, 'test4');
+printToDom2(str, "testClass");
